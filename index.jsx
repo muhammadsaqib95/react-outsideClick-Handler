@@ -1,14 +1,14 @@
 import { useEffect, useRef } from "react";
 export default function OutsideClickHandler({
   children,
-  onClickOutside,
+  onOutsideClick,
   ...props
 }) {
   const wrapperRef = useRef(null);
   useEffect(() => {
     function handleClickOutside(event) {
       if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
-        onClickOutside();
+        onOutsideClick();
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
