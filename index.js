@@ -4,7 +4,7 @@ export default function OutsideClickHandler({
   onOutsideClick,
   ...props
 }) {
-  const wrapperRef = useRef(null);
+  const wrapperRef = useRef();
   useEffect(() => {
     function handleClickOutside(event) {
       if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
