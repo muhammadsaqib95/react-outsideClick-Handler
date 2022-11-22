@@ -1,5 +1,9 @@
 import { useEffect, useRef } from "react";
-export default function OutsideClickHandler({children, onClickOutside, ...props}) {
+export default function OutsideClickHandler({
+  children,
+  onClickOutside,
+  ...props
+}) {
   const wrapperRef = useRef(null);
   useEffect(() => {
     function handleClickOutside(event) {
@@ -17,4 +21,4 @@ export default function OutsideClickHandler({children, onClickOutside, ...props}
       {children}
     </div>
   );
-  }
+}
