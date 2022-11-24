@@ -1,13 +1,14 @@
-import { useEffect, useRef } from "react";
-export default function OutsideClickHandler({
+
+import React, { useEffect, useRef } from "react";
+export const OutsideClickHandler = ({
   children,
   onOutsideClick,
   ...props
-}) {
-  const wrapperRef = useRef();
+}) => {
+  const wrapperRef = useRef(null);
   useEffect(() => {
     function handleClickOutside(event) {
-      if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+      if (wrapperRef?.current && !wrapperRef?.current.contains(event.target)) {
         onOutsideClick();
       }
     }

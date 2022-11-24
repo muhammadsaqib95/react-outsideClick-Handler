@@ -11,7 +11,7 @@ React Library for dealing with outside click of its container.
 ```javascript
 import { useState } from "react";
 import "./App.css";
-import OutsideClickHandler from "outsideclick-handler-react";
+import { OutsideClickHandler } from "outsideclick-handler-react";
 export default function App() {
   const [count, setCount] = useState(0);
 
